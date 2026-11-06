@@ -1,0 +1,36 @@
+/*
+ * MCUboot overlay for the custom nRF52832 Type-C board.
+ *
+ * Keep this file independent of the application overlay: the bootloader only
+ * needs the CH340 UART pins and the boot partition.  In particular it must not
+ * pull in the I2S/SPI/IMU nodes from app.overlay.
+ *
+ * Board silk (CH340 side): TXD -> P0.06, RXD <- P0.08, so MCU TX = P0.08 and
+ * MCU RX = P0.06.
+ */
+
+&uart0 {
+	/delete-property/ hw-flow-control;
+};
+
+&uart0_default {
+	group1 {
+		psels = <NRF_PSEL(UART_TX, 0, 8)>,
+			<NRF_PSEL(UART_RX, 0, 6)>;
+	};
+};
+
+&uart0_sleep {
+	group1 {
+		psels = <NRF_PSEL(UART_RX, 0, 6)>;
+	};
+	group2 {
+		psels = <NRF_PSEL(UART_TX, 0, 8)>;
+	};
+};
+
+/ {
+	chosen {
+		zephyr,code-partition = &boot_partition;
+	};
+};

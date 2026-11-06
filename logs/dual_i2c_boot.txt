@@ -1,0 +1,12 @@
+i2c@40003000 WHO_AM_I=0xea ret=0
+i2c@40004000 WHO_AM_I=0xea ret=0
+IMU0 ready=1 z=3760 reads/s=991 count=1983 errors=0
+IMU1 ready=1 z=3682 reads/s=991 count=1983 errors=0
+IMU0 ready=1 z=3790 reads/s=1124 count=4231 errors=0
+IMU1 ready=1 z=3660 reads/s=1124 count=4231 errors=0
+IMU0 ready=1 z=3838 reads/s=1193 count=6617 errors=0
+IMU1 ready=1 z=3650 reads/s=1193 count=6617 errors=0
+IMU0 ready=1 z=3714 reads/s=1188 count=8993 errors=0
+IMU1 ready=1 z=3618 reads/s=1188 count=8993 errors=0
+IMU0 ready=1 z=3762 reads/s=1160 count=11314 errors=0
+IMU1 ready=1 z=3670 reads/s=1160 co

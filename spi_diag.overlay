@@ -1,0 +1,6 @@
+/* Conservative SPI bring-up; use with the normal application. */
+&icm20948_1 {
+	spi-max-frequency = <125000>;
+	spi-cs-setup-delay-ns = <10000>;
+	spi-cs-hold-delay-ns = <10000>;
+};

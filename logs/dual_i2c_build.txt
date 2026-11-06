@@ -1,0 +1,154 @@
+-- west build: generating a build system
+Loading Zephyr module(s) (Zephyr base (cached)): sysbuild_default
+-- Cache files will be written to: C:/ncs/v3.4.1/zephyr/.cache
+-- Found west (found suitable version "1.5.0", minimum required is "0.14.0")
+-- Board: nrf52dk, qualifiers: nrf52832
+Parsing C:/ncs/v3.4.1/zephyr/share/sysbuild/Kconfig
+Loaded configuration 'C:/nrf_ws/build-dual-i2c-z/zephyr/.config'
+No change to configuration in 'C:/nrf_ws/build-dual-i2c-z/zephyr/.config'
+No change to Kconfig header in 'C:/nrf_ws/build-dual-i2c-z/_sysbuild/autoconf.h'
+-- Sysbuild assigned MCUboot image IDs:
+   * Application: 0
+-- 
+   *****************************
+   * Running CMake for mcuboot *
+   *****************************
+
+Loading Zephyr default modules (Zephyr base (cached)).
+-- Application: C:/ncs/v3.4.1/bootloader/mcuboot/boot/zephyr
+-- CMake version: 4.2.1
+-- Cache files will be written to: C:/ncs/v3.4.1/zephyr/.cache
+-- Zephyr version: 4.4.2 (C:/ncs/v3.4.1/zephyr)
+-- Found west (found suitable version "1.5.0", minimum required is "0.14.0")
+-- Board: nrf52dk, qualifiers: nrf52832
+-- Found host-tools: zephyr 1.0.1 (C:/ncs/toolchains/4f5b6ad6dd/opt/zephyr-sdk)
+-- Found toolchain: zephyr 1.0.1 (C:/ncs/toolchains/4f5b6ad6dd/opt/zephyr-sdk)
+-- Found BOARD.dts: C:/ncs/v3.4.1/zephyr/boards/nordic/nrf52dk/nrf52dk_nrf52832.dts
+-- Found devicetree overlay: C:/nrf_ws/project/sysbuild/mcuboot.overlay
+-- Generated zephyr.dts: C:/nrf_ws/build-dual-i2c-z/mcuboot/zephyr/zephyr.dts
+-- Generated pickled edt: C:/nrf_ws/build-dual-i2c-z/mcuboot/zephyr/edt.pickle
+-- Generated devicetree_generated.h: C:/nrf_ws/build-dual-i2c-z/mcuboot/zephyr/include/generated/zephyr/devicetree_generated.h
+
+warning: Deprecated symbol BOOT_ECDSA_TINYCRYPT is enabled.
+
+Parsing C:/ncs/v3.4.1/bootloader/mcuboot/boot/zephyr/Kconfig
+Loaded configuration 'C:/nrf_ws/build-dual-i2c-z/mcuboot/zephyr/.config'
+Merged configuration 'C:/nrf_ws/build-dual-i2c-z/mcuboot/zephyr/.config.sysbuild'
+No change to configuration in 'C:/nrf_ws/build-dual-i2c-z/mcuboot/zephyr/.config'
+No change to Kconfig header in 'C:/nrf_ws/build-dual-i2c-z/mcuboot/zephyr/include/generated/zephyr/autoconf.h'
+-- Using ccache: C:/ncs/toolchains/4f5b6ad6dd/opt/bin/ccache.exe
+-- Found gen_kobject_list: C:/ncs/v3.4.1/zephyr/scripts/build/gen_kobject_list.py
+CMake Warning at C:/ncs/v3.4.1/zephyr/CMakeLists.txt:1081 (message):
+  No SOURCES given to Zephyr library: drivers__console
+
+  Excluding target from build.
+
+
+MCUBoot bootloader key file: C:/ncs/v3.4.1/bootloader/mcuboot/root-ec-p256.pem
+CMake Warning at CMakeLists.txt:466 (message):
+  WARNING: Using default MCUboot signing key file, this file is for debug use
+  only and is not secure!
+
+
+Calculated maximum number of sectors: 55
+-- Configuring done (16.9s)
+-- Generating done (0.9s)
+-- Build files have been written to: C:/nrf_ws/build-dual-i2c-z/mcuboot
+-- 
+   *****************************
+   * Running CMake for project *
+   *****************************
+
+Loading Zephyr default modules (Zephyr base (cached)).
+-- Application: C:/nrf_ws/project
+-- CMake version: 4.2.1
+-- Cache files will be written to: C:/ncs/v3.4.1/zephyr/.cache
+-- Zephyr version: 4.4.2 (C:/ncs/v3.4.1/zephyr)
+-- Found west (found suitable version "1.5.0", minimum required is "0.14.0")
+-- Board: nrf52dk, qualifiers: nrf52832
+-- Found host-tools: zephyr 1.0.1 (C:/ncs/toolchains/4f5b6ad6dd/opt/zephyr-sdk)
+-- Found toolchain: zephyr 1.0.1 (C:/ncs/toolchains/4f5b6ad6dd/opt/zephyr-sdk)
+-- Found BOARD.dts: C:/ncs/v3.4.1/zephyr/boards/nordic/nrf52dk/nrf52dk_nrf52832.dts
+-- Found devicetree overlay: C:/nrf_ws/project/app.overlay
+-- Found devicetree overlay: dual_i2c_z.overlay
+-- Generated zephyr.dts: C:/nrf_ws/build-dual-i2c-z/project/zephyr/zephyr.dts
+-- Generated pickled edt: C:/nrf_ws/build-dual-i2c-z/project/zephyr/edt.pickle
+-- Generated devicetree_generated.h: C:/nrf_ws/build-dual-i2c-z/project/zephyr/include/generated/zephyr/devicetree_generated.h
+Parsing C:/nrf_ws/project/Kconfig
+Loaded configuration 'C:/nrf_ws/build-dual-i2c-z/project/zephyr/.config'
+Merged configuration 'C:/nrf_ws/build-dual-i2c-z/project/zephyr/.config.sysbuild'
+No change to configuration in 'C:/nrf_ws/build-dual-i2c-z/project/zephyr/.config'
+No change to Kconfig header in 'C:/nrf_ws/build-dual-i2c-z/project/zephyr/include/generated/zephyr/autoconf.h'
+-- Using ccache: C:/ncs/toolchains/4f5b6ad6dd/opt/bin/ccache.exe
+-- Found gen_kobject_list: C:/ncs/v3.4.1/zephyr/scripts/build/gen_kobject_list.py
+CMake Warning at C:/ncs/v3.4.1/zephyr/CMakeLists.txt:1081 (message):
+  No SOURCES given to Zephyr library: drivers__spi
+
+  Excluding target from build.
+
+
+-- Including signing script: C:/ncs/v3.4.1/nrf/cmake/sysbuild/image_signing.cmake
+-- Configuring done (17.0s)
+-- Generating done (0.9s)
+-- Build files have been written to: C:/nrf_ws/build-dual-i2c-z/project
+-- Configuring done (42.3s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/nrf_ws/build-dual-i2c-z
+-- west build: building application
+[0/8] Performing build step for 'project'
+[1/159] Generating misc/generated/syscalls.json, misc/generated/struct_tags.json
+[2/7] Generating linker_zephyr_pre0.cmd
+[3/7] Linking C executable zephyr\zephyr_pre0.elf; Logical command for additional byproducts on target: zephyr_pre0
+[4/7] Generating linker.cmd
+[5/7] Generating isr_tables.c, isr_tables_vt.ld, isr_tables_swi.ld
+[6/7] Building C object zephyr/CMakeFiles/zephyr_final.dir/isr_tables.c.obj
+[7/7] Linking C executable zephyr\zephyr.elf
+Memory region         Used Size  Region Size  %age Used
+           FLASH:       38112 B     225114 B     16.93%
+             RAM:       12928 B        64 KB     19.73%
+        IDT_LIST:           0 B        32 KB      0.00%
+Generating files from C:/nrf_ws/build-dual-i2c-z/project/zephyr/zephyr.elf for board: nrf52dk/nrf52832
+image.py: sign the payload
+image.py: sign the payload
+[1/8] Performing build step for 'mcuboot'
+[1/194] Generating misc/generated/syscalls.json, misc/generated/struct_tags.json
+[2/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/utilities/pkcs5.c.obj
+[3/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/utilities/pem.c.obj
+[4/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/extras/md.c.obj
+[5/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/legacy_sub/src/bignum.c.obj
+[6/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/legacy_sub/src/bignum_core.c.obj
+[7/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/utilities/asn1write.c.obj
+[8/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/extras/pk_wrap.c.obj
+[9/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/platform/memory_buffer_alloc.c.obj
+[10/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/legacy_sub/src/ecp_curves.c.obj
+[11/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/extras/nist_kw.c.obj
+[12/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/extras/pk.c.obj
+[13/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/utilities/oid.c.obj
+[14/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/legacy_sub/src/ecp.c.obj
+[15/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/extras/pk_ecc.c.obj
+[16/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/extras/pk_rsa.c.obj
+[17/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/utilities/asn1parse.c.obj
+[18/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/utilities/base64.c.obj
+[19/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/legacy_sub/src/psa_util_internal.c.obj
+[20/33] Generating linker_zephyr_pre0.cmd
+[21/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/extras/pkparse.c.obj
+[22/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/extras/pkwrite.c.obj
+[23/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/platform/platform_util.c.obj
+[24/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/utilities/constant_time.c.obj
+[25/33] Building C object modules/nrf/subsys/nrf_security/src/CMakeFiles/mbedcrypto.dir/C_/ncs/v3.4.1/modules/crypto/oberon-psa-crypto/core/psa_util.c.obj
+[26/33] Linking C static library modules\nrf\subsys\nrf_security\src\libmbedcrypto.a
+[27/33] Building C object CMakeFiles/app.dir/C_/ncs/v3.4.1/bootloader/mcuboot/boot/bootutil/src/image_ecdsa.c.obj
+[28/33] Linking C static library app\libapp.a
+[29/33] Linking C executable zephyr\zephyr_pre0.elf; Logical command for additional byproducts on target: zephyr_pre0
+[30/33] Generating linker.cmd
+[31/33] Generating isr_tables.c, isr_tables_vt.ld, isr_tables_swi.ld
+[32/33] Building C object zephyr/CMakeFiles/zephyr_final.dir/isr_tables.c.obj
+[33/33] Linking C executable zephyr\zephyr.elf
+Memory region         Used Size  Region Size  %age Used
+           FLASH:       31072 B        48 KB     63.22%
+             RAM:       17728 B        64 KB     27.05%
+        IDT_LIST:           0 B        32 KB      0.00%
+Generating files from C:/nrf_ws/build-dual-i2c-z/mcuboot/zephyr/zephyr.elf for board: nrf52dk/nrf52832
+[5/8] Generating ../dfu_application.zip
+[7/8] No install step for 'mcuboot'
+[8/8] Completed 'mcuboot'

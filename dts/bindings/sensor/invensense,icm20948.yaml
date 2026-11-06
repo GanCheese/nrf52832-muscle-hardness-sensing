@@ -1,0 +1,71 @@
+# Copyright (c) 2026
+# SPDX-License-Identifier: Apache-2.0
+
+description: |
+  InvenSense ICM-20948 9-axis IMU, SPI mode.
+
+  The driver configures the accelerometer and gyroscope for low-noise
+  operation and uses the INT1 pin as a data-ready interrupt.
+
+compatible: "invensense,icm20948"
+
+include: [spi-device.yaml, base.yaml]
+
+properties:
+  int-gpios:
+    type: phandle-array
+    required: true
+    description: |
+      ICM-20948 INT1 pin connected to an MCU GPIO.  The driver programs the
+      sensor for open-drain, active-low, latched operation when this GPIO is
+      declared GPIO_ACTIVE_LOW, and for push-pull, active-high operation
+      otherwise.
+
+  accel-range-g:
+    type: int
+    default: 8
+    enum: [2, 4, 8, 16]
+    description: Accelerometer full-scale range in g.
+
+  gyro-range-dps:
+    type: int
+    default: 500
+    enum: [250, 500, 1000, 2000]
+    description: Gyroscope full-scale range in degrees/second.
+
+  accel-dlpf-bypass:
+    type: boolean
+    description: |
+      Bypass the accelerometer DLPF.  This gives a 4500 Hz output rate and a
+      nominal 1209 Hz -3 dB bandwidth, which is the mode intended for the
+      mechano-acoustic measurement (50-800 Hz).
+
+  accel-dlpf-cfg:
+    type: int
+    default: 7
+    enum: [0, 1, 2, 3, 4, 5, 6, 7]
+    description: Accelerometer DLPF configuration when the DLPF is enabled.
+
+  gyro-dlpf-bypass:
+    type: boolean
+    description: Bypass the gyroscope DLPF (9000 Hz output rate).
+
+  gyro-dlpf-cfg:
+    type: int
+    default: 7
+    enum: [0, 1, 2, 3, 4, 5, 6, 7]
+    description: Gyroscope DLPF configuration when the DLPF is enabled.
+
+  gyro-sample-rate-div:
+    type: int
+    default: 0
+    description: |
+      Gyroscope sample-rate divider.  With the DLPF enabled the output rate
+      is 1125/(1 + divider) Hz.
+
+  vddio-millivolt:
+    type: int
+    default: 1800
+    description: |
+      VDDIO of the sensor module, used only for informational purposes by the
+      application.  It does not change the register configuration.

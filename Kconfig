@@ -1,0 +1,38 @@
+# Fixed-frequency MAX98357A tone test
+#
+# The nRF52832 I2S peripheral runs at 8 kHz because that is the only
+# MAX98357A-supported LRCLK rate that the 32 MHz clock can divide exactly.
+# Keep the tone below 2 kHz so there are at least four samples per cycle.
+
+mainmenu "nRF52832 MAX98357A tone test"
+
+config APP_DUAL_I2C_Z_FIFO
+	bool "Dual independent I2C Z acceleration acquisition via hardware FIFO"
+	default n
+
+config APP_DUAL_I2C_Z
+	bool "Dual independent I2C Z acceleration acquisition"
+	default n
+
+config APP_IMU_I2C_DIAG
+	bool "Standalone ICM20948 I2C diagnostic"
+	default n
+
+config APP_TONE_FREQ_HZ
+	int "Fixed tone frequency (Hz)"
+	default 400
+	range 20 2000
+	help
+	  Frequency of the continuous sine tone sent to the MAX98357A.
+	  The value is compiled into the image; change it and rebuild to use
+	  a different fixed frequency.
+
+config APP_TONE_AMPLITUDE
+	int "Tone amplitude (16-bit PCM counts)"
+	default 8000
+	range 0 32767
+	help
+	  Peak amplitude of the sine tone.  8000 is about -12 dBFS, a
+	  deliberately conservative level for the first hardware test.
+
+source "Kconfig.zephyr"

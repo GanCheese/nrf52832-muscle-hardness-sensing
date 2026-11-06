@@ -1,0 +1,29 @@
+[00:00:00.000,732] <inf> max98357a: MAX98357A ready: 8000 Hz, 16-bit, 128 frames/block
+[00:00:00.222,167] <err> icm20948: icm20948@0: bank 0 reg 0x03 = 0x00, expected 0x10
+[00:00:00.230,651] <err> icm20948: icm20948@0: sensor configuration failed: -5
+[00:00:00.451,568] <err> icm20948: icm20948@1: bank 2 reg 0x14 = 0x00, expected 0x3c
+[00:00:00.460,083] <err> icm20948: icm20948@1: sensor configuration failed: -5
+*** Booting nRF Connect SDK v3.4.1-b20f8619ba9a ***
+*** Using Zephyr OS v4.4.2-33fa6a7aac6a ***
+
+*** nRF52832 MAX98357A fixed-tone test ***
+Tone: 400 Hz, amplitude 8000/32767, LRCLK: 8000 Hz
+Pins: BCLK=P0.05 LRCLK=P0.04 DIN=P0.03 SD=P0.07
+IMU: reporting both chip selects once every 2 s
+IMU0: ready=0 who=0x00 read_ret=0
+IMU1: ready=0 who=0x00 read_ret=0
+AMP: playing 400 Hz at 8000 Hz sample rate, amplitude 8000
+IMU0: ready=0 who=0x00 read_ret=0
+IMU1: ready=0 who=0x00 read_ret=0
+IMU0: ready=0 who=0x00 read_ret=0
+IMU1: ready=0 who=0x00 read_ret=0
+IMU0: ready=0 who=0x00 read_ret=0
+IMU1: ready=0 who=0x00 read_ret=0
+IMU0: ready=0 who=0x00 read_ret=0
+IMU1: ready=0 who=0x00 read_ret=0
+IMU0: ready=0 who=0x00 read_ret=0
+IMU1: ready=0 who=0x00 read_ret=0
+IMU0: ready=0 who=0x00 read_ret=0
+IMU1: ready=0 who=0x00 read_ret=0
+IMU0: ready=0 who=0x00 read_ret=0
+IMU1: ready=0 who=0x00 read_ret=0

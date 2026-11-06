@@ -1,1 +1,17 @@
 build*/
+build-usb/
+.tools/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# J-Link / Segger logs
+JLinkLog.txt
+JLinkSettings.ini

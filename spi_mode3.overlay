@@ -1,0 +1,5 @@
+#include "spi_diag.overlay"
+&icm20948_1 {
+	spi-cpol;
+	spi-cpha;
+};

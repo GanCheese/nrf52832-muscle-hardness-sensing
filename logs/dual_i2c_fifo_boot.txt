@@ -1,0 +1,20 @@
+*** Booting nRF Connect SDK v3.4.1-b20f8619ba9a ***
+*** Using Zephyr OS v4.4.2-33fa6a7aac6a ***
+DUAL I2C Z FIFO: IMU0 SCL=29 SDA=28; IMU1 SCL=31 SDA=30; 400kHz, addr=0x68
++/-8g, 4096 LSB/g; nominal ODR=4500Hz; hardware FIFO, NOT synchronized
+i2c@40003000 WHO_AM_I=0xea ret=0
+i2c@40004000 WHO_AM_I=0xea ret=0
+i2c@40003000 FIFO ready: 6 bytes/sample, batch=252 bytes
+i2c@40004000 FIFO ready: 6 bytes/sample, batch=252 bytes
+IMU0 ready=1 z=3788 samples/s=3918 count=7836 errors=0 fifo_max=330
+IMU1 ready=1 z=3294 samples/s=3897 count=7795 errors=0 fifo_max=330
+IMU0 ready=1 z=3780 samples/s=4541 count=16923 errors=0 fifo_max=330
+IMU1 ready=1 z=3332 samples/s=4548 count=16897 errors=0 fifo_max=330
+IMU0 ready=1 z=3790 samples/s=4547 count=26017 errors=0 fifo_max=330
+IMU1 ready=1 z=3346 samples/s=4536 count=25969 errors=0 fifo_max=330
+IMU0 ready=1 z=3774 samples/s=4550 count=35117 errors=0 fifo_max=330
+IMU1 ready=1 z=3296 samples/s=4547 count=35064 errors=0 fifo_max=330
+IMU0 ready=1 z=3752 samples/s=4551 count=44219 errors=0 fifo_max=330
+IMU1 ready=1 z=3348 samples/s=4534 count=44133 errors=0 fifo_max=330
+IMU0 ready=1 z=3764 samples/s=4538 count=53301 errors=0 fifo_max=330
+IMU1 ready=1 z=3346 samples/s=4528 count=53195 errors=0 fifo_max=330

@@ -1,0 +1,21 @@
+I2C 0x68: ret=0 WHO_AM_I=0xea
+raw accel=9628,280,13264 gyro=47,170,-8
+I2C 0x69: ret=-5 WHO_AM_I=0x00
+I2C 0x68: ret=0 WHO_AM_I=0xea
+raw accel=9664,368,13240 gyro=-18,108,32
+I2C 0x69: ret=-5 WHO_AM_I=0x00
+I2C 0x68: ret=0 WHO_AM_I=0xea
+raw accel=9744,332,13324 gyro=28,168,-19
+I2C 0x69: ret=-5 WHO_AM_I=0x00
+I2C 0x68: ret=0 WHO_AM_I=0xea
+raw accel=9680,316,13240 gyro=47,142,5
+I2C 0x69: ret=-5 WHO_AM_I=0x00
+I2C 0x68: ret=0 WHO_AM_I=0xea
+raw accel=9660,344,13248 gyro=-43,149,23
+I2C 0x69: ret=-5 WHO_AM_I=0x00
+I2C 0x68: ret=0 WHO_AM_I=0xea
+raw accel=9652,360,13196 gyro=10,135,37
+I2C 0x69: ret=-5 WHO_AM_I=0x00
+I2C 0x68: ret=0 WHO_AM_I=0xea
+raw accel=9664,376,13224 gyro=-6,132,-17
+I2C 0x69: ret=-5 WHO_AM_I=0x00

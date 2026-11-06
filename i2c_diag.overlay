@@ -1,0 +1,28 @@
+/* Apply after app.overlay. Keep the existing SCL/SDA wires. */
+&spi1 { status = "disabled"; };
+&icm20948_0 { status = "disabled"; };
+&icm20948_1 { status = "disabled"; };
+&max98357a { status = "disabled"; };
+&i2s0 { status = "disabled"; };
+&pinctrl {
+	diag_i2c_default: diag_i2c_default {
+		group1 {
+			psels = <NRF_PSEL(TWIM_SCL, 0, 31)>,
+				<NRF_PSEL(TWIM_SDA, 0, 30)>;
+		};
+	};
+	diag_i2c_sleep: diag_i2c_sleep {
+		group1 {
+			psels = <NRF_PSEL(TWIM_SCL, 0, 31)>,
+				<NRF_PSEL(TWIM_SDA, 0, 30)>;
+			low-power-enable;
+		};
+	};
+};
+&i2c0 {
+	status = "okay";
+	clock-frequency = <100000>;
+	pinctrl-0 = <&diag_i2c_default>;
+	pinctrl-1 = <&diag_i2c_sleep>;
+	pinctrl-names = "default", "sleep";
+};

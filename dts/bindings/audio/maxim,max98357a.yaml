@@ -1,0 +1,47 @@
+# Copyright (c) 2026
+# SPDX-License-Identifier: Apache-2.0
+
+description: |
+  Maxim MAX98357A PCM/I2S class-D audio amplifier.
+
+  The device has no control bus: BCLK, LRCLK and DIN are driven by the I2S
+  controller, while SD_MODE is controlled by a GPIO.  SD_MODE is a
+  multi-level pin; driving it high selects the left channel and takes the
+  device out of shutdown.
+
+compatible: "maxim,max98357a"
+
+include: base.yaml
+
+properties:
+  i2s-controller:
+    type: phandle
+    required: true
+    description: I2S controller that drives BCLK, LRCLK and DIN.
+
+  sdin-gpios:
+    type: phandle-array
+    required: true
+    description: |
+      GPIO connected to SD_MODE.  Declare this GPIO active-high.  A low level
+      puts the amplifier in shutdown, a high level enables the left channel.
+
+  sample-rate:
+    type: int
+    default: 8000
+    description: |
+      LRCLK frequency.  The MAX98357A only accepts 8, 16, 32, 44.1, 48,
+      88.2 and 96 kHz.  On nRF52832, 8 kHz is the only one of these that the
+      internal 32 MHz clock can generate exactly (32 MHz / 125 / 32).
+
+  word-size:
+    type: int
+    default: 16
+    enum: [16]
+    description: I2S word size in bits (this driver implements 16-bit PCM).
+
+  preload-blocks:
+    type: int
+    default: 3
+    enum: [1, 2, 3, 4]
+    description: Number of silence blocks queued before starting the I2S clocks.
